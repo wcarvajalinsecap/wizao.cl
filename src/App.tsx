@@ -44,6 +44,10 @@ const WHATSAPP_URL =
   "https://wa.me/56994122686?text=" +
   encodeURIComponent("Hola Wilson 👋, te escribo desde wizao.cl");
 
+// INSECAP fundado en 2009 → los años de trayectoria se calculan solos (incremental)
+const INSECAP_FOUNDING_YEAR = 2009;
+const INSECAP_YEARS = new Date().getFullYear() - INSECAP_FOUNDING_YEAR;
+
 const socials = [
   { name: "YouTube", href: "https://www.youtube.com/c/OWizao", icon: Youtube },
   { name: "Instagram", href: "https://www.instagram.com/owizao/", icon: Instagram },
@@ -55,7 +59,7 @@ const socials = [
 ];
 
 const stats = [
-  { icon: Building2, value: 16, suffix: "+", label: "años de trayectoria OTEC" },
+  { icon: Building2, value: INSECAP_YEARS, suffix: "+", label: "años de trayectoria OTEC" },
   { icon: MapPin, value: 13, suffix: "+", label: "sucursales conectadas" },
   { icon: MessageSquareText, value: 18000, suffix: "+", label: "mensajes analizados" },
   { icon: Users, value: 4, suffix: "", label: "personas en el equipo TICA" },
@@ -67,7 +71,7 @@ const facets = [
     tag: "Faceta 01",
     icon: Code2,
     title: "El Ingeniero",
-    desc: "Líder de Área TICA en INSECAP S.p.A. — OTEC chilena con 16 años, 13+ sucursales, regulada por SENCE. Convierto problemas operativos recurrentes en sistemas estructurados.",
+    desc: `Líder de Área TICA en INSECAP S.p.A. — OTEC chilena con ${INSECAP_YEARS} años, 13+ sucursales, regulada por SENCE. Convierto problemas operativos recurrentes en sistemas estructurados.`,
     accent: "text-red-400",
     iconBg: "bg-red-500/10 text-red-400",
     border: "hover:border-red-500/50",
