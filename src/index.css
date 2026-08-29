@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 30% 4%;
+    --foreground: 0 0% 98%;
+    --card: 240 25% 7%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 25% 6%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 187 95% 55%;
+    --primary-foreground: 240 30% 4%;
+    --secondary: 240 20% 12%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 15% 14%;
+    --muted-foreground: 240 10% 70%;
+    --accent: 262 80% 62%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 15% 16%;
+    --input: 240 15% 16%;
+    --ring: 187 95% 55%;
+    --radius: 0.75rem;
+
+    --wizao-cyan: 187 95% 55%;
+    --wizao-cyan-dim: 187 70% 45%;
+    --wizao-violet: 262 80% 62%;
+    --wizao-violet-dim: 262 60% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* scrollbar sutil */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--wizao-cyan-dim));
+}
+
+/* selección */
+::selection {
+  background: hsl(var(--wizao-cyan) / 0.3);
+  color: white;
+}

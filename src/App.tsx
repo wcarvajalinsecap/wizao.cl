@@ -1,0 +1,261 @@
+import { motion } from "framer-motion";
+import {
+  Code2,
+  Rocket,
+  Mic,
+  Gamepad2,
+  ArrowRight,
+  Mail,
+  Music,
+  Youtube,
+  Instagram,
+  Twitter,
+  Music2,
+  MonitorPlay,
+  Linkedin,
+  Sparkles,
+  Cpu,
+  Database,
+  Cloud,
+  Bot,
+  Briefcase,
+  GraduationCap,
+  Users,
+} from "lucide-react";
+
+const socials = [
+  { name: "YouTube", href: "https://www.youtube.com/c/OWizao", icon: Youtube },
+  { name: "Instagram", href: "https://www.instagram.com/owizao/", icon: Instagram },
+  { name: "X", href: "https://x.com/Owizao", icon: Twitter },
+  { name: "TikTok", href: "https://www.tiktok.com/@owizao", icon: MonitorPlay },
+  { name: "SoundCloud", href: "https://soundcloud.com/wizao", icon: Music2 },
+  { name: "LinkedIn", href: "https://www.linkedin.com/", icon: Linkedin },
+];
+
+const facets = [
+  {
+    id: "ingeniero",
+    tag: "Faceta 01",
+    icon: Code2,
+    title: "El Ingeniero",
+    desc: "Software Developer en INSECAP Capacitación. Construyo y opero los sistemas que hacen funcionar la capacitación de punta a punta.",
+    color: "from-cyan-400/20 to-cyan-600/5",
+    accent: "text-cyan-400",
+    border: "hover:border-cyan-400/40",
+    items: [
+      { icon: Briefcase, title: "Rol actual", text: "Software Developer — INSECAP Capacitación. Liderazgo técnico en TICA / Informática." },
+      { icon: Cpu, title: "Stack", text: "TMS · Moodle / E-learning · SQL · C# · Azure / IIS · automatizaciones e integraciones" },
+      { icon: Bot, title: "Proyectos", text: "RelatoresYa · CAPIN IA · automatización de certificación" },
+      { icon: GraduationCap, title: "Hitos", text: "Jurado en HackaDisc UCN (2025) — creé el dataset y planteé el reto" },
+    ],
+  },
+  {
+    id: "emprendedor",
+    tag: "Faceta 02",
+    icon: Rocket,
+    title: "El Emprendedor",
+    desc: "Proyectos propios donde aplico tecnología para resolver problemas reales de la industria.",
+    color: "from-violet-400/20 to-violet-600/5",
+    accent: "text-violet-400",
+    border: "hover:border-violet-400/40",
+    items: [
+      { icon: Sparkles, title: "CotizaSmart.cl", text: "Plataforma de cotizaciones comparativas con evaluación asistida por IA." },
+      { icon: Users, title: "Multi-tenant", text: "Roles de administrador, ayudante y cliente — pensada para logística e industria." },
+      { icon: Database, title: "Stack", text: "Next.js · Supabase · IA · Cloudflare R2" },
+      { icon: Rocket, title: "Visión", text: "Automatizar los procesos de compra comparativa con IA." },
+    ],
+  },
+  {
+    id: "comunicador",
+    tag: "Faceta 03",
+    icon: Mic,
+    title: "El Comunicador",
+    desc: "Divulgo lo que sé: capacitación, industria, tecnología y el futuro del trabajo.",
+    color: "from-sky-400/20 to-sky-600/5",
+    accent: "text-sky-400",
+    border: "hover:border-sky-400/40",
+    items: [
+      { icon: Mic, title: "Podcast", text: "«Hablemos de Capacitación» — conversaciones que transforman experiencias en aprendizaje." },
+      { icon: MonitorPlay, title: "Canal INSECAP", text: "@InsecapCapacitacion — contenido educativo técnico, cursos y cápsulas." },
+      { icon: Users, title: "Cap 01", text: "Cómo SAP Cambia tu Carrera en la Industria y Minería." },
+      { icon: Users, title: "Cap 02", text: "Lo que Nadie te Dice sobre Operar Maquinaria en Minería." },
+    ],
+  },
+  {
+    id: "creador",
+    tag: "Faceta 04",
+    icon: Gamepad2,
+    title: "El Creador — Wizao",
+    desc: "Más de 10 años creando en internet: YouTube, música, gaming y efectos especiales.",
+    color: "from-fuchsia-400/20 to-fuchsia-600/5",
+    accent: "text-fuchsia-400",
+    border: "hover:border-fuchsia-400/40",
+    items: [
+      { icon: Youtube, title: "YouTube", text: "Canal activo desde ~2012: vlogs, efectos especiales, gaming y música." },
+      { icon: Music, title: "Música", text: "Tu Esencia (2020) · No es una Canción de Amor · Palabras de Lucha y más." },
+      { icon: MonitorPlay, title: "TikTok", text: "@owizao — perfil con bio «Mejora Constante»." },
+      { icon: Gamepad2, title: "Gaming", text: "Twitch + YouTube: Pokémon Go, Let's Go y comunidad." },
+    ],
+  },
+];
+
+const facetLinks: Record<string, { label: string; href: string }[]> = {
+  ingeniero: [{ label: "INSECAP", href: "https://www.insecap.cl" }],
+  emprendedor: [{ label: "cotizasmart.cl →", href: "https://cotizasmart.cl" }],
+  comunicador: [
+    { label: "Playlist podcast →", href: "https://www.youtube.com/playlist?list=PLEFHa-sTHvG2aDlqufBAD1mWdSTZdvxom" },
+    { label: "@InsecapCapacitacion →", href: "https://www.youtube.com/@InsecapCapacitacion" },
+  ],
+  creador: [
+    { label: "Canal YouTube →", href: "https://www.youtube.com/c/OWizao" },
+    { label: "SoundCloud →", href: "https://soundcloud.com/wizao" },
+  ],
+};
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-background text-foreground font-sans">
+      {/* fondo con glow */}
+      <div className="pointer-events-none fixed inset-0 overflow-hidden">
+        <div className="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-[120px] animate-pulse-glow" />
+        <div className="absolute top-1/3 -right-40 h-[500px] w-[500px] rounded-full bg-violet-500/10 blur-[120px] animate-pulse-glow" />
+      </div>
+
+      {/* NAV */}
+      <header className="fixed top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-md">
+        <div className="container flex h-16 items-center justify-between">
+          <a href="#top" className="flex items-center gap-2 font-bold tracking-tight">
+            <span className="text-cyan-400">wizao</span>
+            <span className="text-muted-foreground">.cl</span>
+          </a>
+          <nav className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
+            {facets.map((f) => (
+              <a key={f.id} href={`#${f.id}`} className="transition-colors hover:text-foreground">
+                {f.title.replace("El ", "").replace("La ", "")}
+              </a>
+            ))}
+            <a href="#contacto" className="rounded-full bg-primary px-4 py-1.5 font-semibold text-primary-foreground transition hover:bg-cyan-300">
+              Contacto
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      {/* HERO */}
+      <section id="top" className="relative flex min-h-screen items-center pt-16">
+        <div className="container">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+            <p className="font-mono text-sm text-cyan-400">// hola, soy</p>
+            <h1 className="mt-3 text-5xl font-extrabold leading-tight md:text-7xl">
+              Wilson <span className="bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">Carvajal</span>
+            </h1>
+            <p className="mt-4 max-w-2xl text-lg text-muted-foreground md:text-xl">
+              Ingeniero Civil en Computación · Software Developer · Emprendedor · Creador digital
+            </p>
+            <p className="mt-2 text-muted-foreground">
+              Cuatro facetas, una sola marca: <span className="font-semibold text-foreground">Wizao</span>
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a href="#contacto" className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground transition hover:bg-cyan-300">
+                Hablemos <ArrowRight className="h-4 w-4" />
+              </a>
+              <a href="#ingeniero" className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 font-semibold transition hover:border-cyan-400/40 hover:text-cyan-300">
+                Conóceme
+              </a>
+            </div>
+            <div className="mt-10 flex flex-wrap gap-3">
+              {socials.map((s) => (
+                <a
+                  key={s.name}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-border bg-card/50 px-4 py-2 text-sm text-muted-foreground transition hover:border-cyan-400/40 hover:text-foreground"
+                >
+                  <s.icon className="h-4 w-4 text-cyan-400" />
+                  {s.name}
+                </a>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FACETAS */}
+      {facets.map((f, idx) => (
+        <section key={f.id} id={f.id} className={`relative py-24 ${idx % 2 === 1 ? "bg-card/30" : ""}`}>
+          <div className="container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className={`font-mono text-xs ${f.accent}`}>{f.tag}</span>
+              <h2 className="mt-2 text-4xl font-bold md:text-5xl">
+                <f.icon className="mr-3 inline h-8 w-8" />
+                {f.title}
+              </h2>
+              <p className="mt-3 max-w-2xl text-muted-foreground">{f.desc}</p>
+            </motion.div>
+
+            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {f.items.map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.08 }}
+                  className={`rounded-xl border border-border bg-gradient-to-br ${f.color} p-6 backdrop-blur-sm transition ${f.border}`}
+                >
+                  <item.icon className={`h-6 w-6 ${f.accent}`} />
+                  <h3 className="mt-3 font-semibold">{item.title}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{item.text}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            {facetLinks[f.id] && (
+              <div className="mt-6 flex flex-wrap gap-3">
+                {facetLinks[f.id].map((l) => (
+                  <a
+                    key={l.href}
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`inline-flex items-center gap-1.5 text-sm font-medium ${f.accent} hover:underline`}
+                  >
+                    {l.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+      ))}
+
+      {/* CONTACTO */}
+      <section id="contacto" className="relative py-24">
+        <div className="container text-center">
+          <span className="font-mono text-xs text-cyan-400">Contacto</span>
+          <h2 className="mt-2 text-4xl font-bold md:text-5xl">Hablemos 🤝</h2>
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+            ¿Proyecto, colaboración, podcast, música o simplemente saludar? Mi inbox está abierto.
+          </p>
+          <div className="mt-8">
+            <a
+              href="mailto:hola@wizao.cl"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground transition hover:bg-cyan-300"
+            >
+              <Mail className="h-5 w-5" /> hola@wizao.cl
+            </a>
+          </div>
+          <p className="mt-16 text-sm text-muted-foreground">
+            wizao.cl — Wilson Carvajal Rozas · Hecho con 🤖 y ☕
+          </p>
+        </div>
+      </section>
+    </div>
+  );
+}
