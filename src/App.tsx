@@ -40,6 +40,10 @@ function SpotifyIcon({ className }: { className?: string }) {
   );
 }
 
+const WHATSAPP_URL =
+  "https://wa.me/56994122686?text=" +
+  encodeURIComponent("Hola Wilson 👋, te escribo desde wizao.cl");
+
 const socials = [
   { name: "YouTube", href: "https://www.youtube.com/c/OWizao", icon: Youtube },
   { name: "Instagram", href: "https://www.instagram.com/owizao/", icon: Instagram },
@@ -203,7 +207,9 @@ export default function App() {
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <a
-                href="#contacto"
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-500 to-violet-500 px-7 py-3 font-semibold text-white shadow-cta transition hover:brightness-110"
               >
                 Hablemos <ArrowRight className="h-4 w-4" />
@@ -328,12 +334,20 @@ export default function App() {
                 Hablemos <span className="text-red-400">🤝</span>
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-slate-300">
-                ¿Proyecto, colaboración, podcast, música o simplemente saludar? Mi inbox está abierto.
+                ¿Proyecto, colaboración, podcast, música o simplemente saludar? Escríbeme por WhatsApp o al correo.
               </p>
-              <div className="mt-9">
+              <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-500 to-violet-500 px-8 py-4 text-lg font-bold text-white shadow-cta transition hover:brightness-110"
+                >
+                  <MessageSquareText className="h-5 w-5" /> WhatsApp
+                </a>
                 <a
                   href="mailto:hola@wizao.cl"
-                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-500 to-violet-500 px-8 py-4 text-lg font-bold text-white shadow-cta transition hover:brightness-110"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-lg font-bold text-white backdrop-blur-sm transition hover:border-red-400/50"
                 >
                   <Mail className="h-5 w-5" /> hola@wizao.cl
                 </a>
