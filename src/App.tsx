@@ -21,6 +21,8 @@ import {
   Briefcase,
   GraduationCap,
   Users,
+  Puzzle,
+  SlidersHorizontal,
 } from "lucide-react";
 
 function SpotifyIcon({ className }: { className?: string }) {
@@ -54,8 +56,9 @@ const facets = [
     items: [
       { icon: Briefcase, title: "Rol actual", text: "Líder de Área TICA en INSECAP S.p.A. — equipo de 4: Luis (TMS/Moodle), Renato (arquitectura e infraestructura), Ernes (TMS/TMS Plus/SAP) y yo, transversal." },
       { icon: Cpu, title: "Stack", text: ".NET (4.7.2 → moderno) · Entity Framework · Razor MVC · SQL Server · Azure (IIS, Blob, VMs, NSG) · NestJS + Prisma + PostgreSQL · Hetzner · Vultr" },
+      { icon: SlidersHorizontal, title: "SAP", text: "Parametrizador SAP — implementación y soporte de módulos, integración con el ecosistema TMS y procesos de negocio." },
       { icon: Database, title: "TMS / TMS Plus", text: "ERP interno de capacitación: cotización → comercialización → participantes → credenciales/SENCE/Moodle. QA automatizado (xUnit, FluentAssertions, Bogus) + CI/CD bloqueante." },
-      { icon: GraduationCap, title: "Moodle", text: "portal.insecap.cl — migración a Moodle 5.1, quiz multilingüe y plugins de feedback." },
+      { icon: Puzzle, title: "Plugins Moodle", text: "Desarrollo a medida sobre portal.insecap.cl: plugins de feedback y quiz multilingüe, migración a Moodle 5.1 — QA automatizado con mi skill review-curso-moodle." },
       { icon: Bot, title: "IA agéntica", text: "Anthropic SDK · Claude Code · MCP · Skills — siguiendo el AI Engineering Skills Map de Andrew Ng." },
       { icon: Cloud, title: "Infraestructura", text: "Tailscale multi-sucursal (13 sedes, CCTV Hikvision), Starlink, Azure DNS, SSL Sectigo, SPF/DKIM/DMARC, n8n, Google Workspace." },
       { icon: Users, title: "Calidad", text: "ISO 9001 / NCh2728:2015 · auditorías SICEP · checklists de verificación normativa." },
