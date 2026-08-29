@@ -1,0 +1,50 @@
+# Wizao — Wilson Carvajal
+
+> Sitio personal y portafolio de Wilson Carvajal Rozas (Wizao), Ingeniero Civil en Computación e Informática y Líder de Área TICA en INSECAP S.p.A. (Chile). Soluciones de software y automatización para todo Chile, con base en Antofagasta y Calama y foco en la industria minera.
+
+## Quién es
+
+Wilson Carvajal Rozas (alias Wizao) es un ingeniero informático chileno. Se autodefine como **sistematizador**: convierte problemas operativos recurrentes en sistemas estructurados. Es Líder de Área TICA en INSECAP S.p.A., OTEC chilena con 17+ años de trayectoria, 13+ sucursales y regulada por SENCE. También es creador digital con más de 10 años de presencia en YouTube, música (Spotify/SoundCloud), gaming y redes sociales.
+
+## Servicios y soluciones
+
+- Desarrollo de software: .NET (ASP.NET 4.7.2 → moderno), Entity Framework, Razor MVC, SQL Server, Azure (IIS, Blob Storage, VMs, NSG), NestJS + Prisma + PostgreSQL, Hetzner, Vultr.
+- Automatización de procesos e integraciones: n8n, Google Workspace, mensajería y correo.
+- E-learning y capacitación: administración y migración de Moodle (portal.insecap.cl, Moodle 5.1), quiz multilingüe, plugins de feedback, QA automatizado de evaluaciones (skill review-curso-moodle).
+- ERP de capacitación TMS / TMS Plus: cotización → comercialización → participantes → credenciales/SENCE/Moodle, con QA automatizado (xUnit, FluentAssertions, Bogus) y CI/CD bloqueante.
+- Parametrización SAP e integración con ecosistemas ERP.
+- Infraestructura multi-sucursal: Tailscale (overlay seguro, acceso SQL remoto, CCTV Hikvision en 13 sedes), Starlink, Azure DNS, SSL Sectigo, SPF/DKIM/DMARC.
+- Analítica de reclamos desde WhatsApp: 8 canales, ~18.000 mensajes → dashboard HTML + PPT.
+- Optimización de costos en Azure: discos huérfanos, backups duplicados, latencia cross-region.
+- Calidad: ISO 9001 / NCh2728:2015, auditorías SICEP, checklists de verificación normativa.
+
+## Cobertura geográfica
+
+- Todo Chile (cobertura nacional).
+- Base: Antofagasta y Calama.
+- Foco: industria minera.
+
+## Proyectos destacados
+
+- TMS / TMS Plus: ERP interno de gestión de capacitación (reescritura activa con QA automatizado y CI/CD).
+- COTIZA: plataforma de comparación de procesos de compra (14 entidades, plan de 7 fases).
+- Analítica de reclamos WhatsApp: 8 canales, ~18.000 mensajes analizados.
+- HackaDISC 2026 con UCN: INSECAP aportó el desafío de predicción de ventas; Wilson fue jurado.
+- Skills propias: review-curso-moodle (QA automatizado de evaluaciones) y guiones-ads-redes.
+
+## Enlaces
+
+- [Sitio web](https://wizao.cl)
+- [YouTube](https://www.youtube.com/c/OWizao)
+- [Instagram](https://www.instagram.com/owizao/)
+- [X / Twitter](https://x.com/Owizao)
+- [TikTok](https://www.tiktok.com/@owizao)
+- [Spotify — artista Wizao](https://open.spotify.com/artist/0InHZv430Rp7Y2AM42lGA0)
+- [SoundCloud](https://soundcloud.com/wizao)
+- [INSECAP](https://www.insecap.cl)
+- [Portal Moodle INSECAP](https://portal.insecap.cl)
+
+## Contacto
+
+- Email: hola@wizao.cl
+- WhatsApp: https://wa.me/56994122686
