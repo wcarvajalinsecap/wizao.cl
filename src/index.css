@@ -4,31 +4,32 @@
 
 @layer base {
   :root {
-    --background: 240 30% 4%;
-    --foreground: 0 0% 98%;
-    --card: 240 25% 7%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 25% 6%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 187 95% 55%;
-    --primary-foreground: 240 30% 4%;
-    --secondary: 240 20% 12%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 15% 14%;
-    --muted-foreground: 240 10% 70%;
+    --background: 210 20% 98%;
+    --foreground: 222 65% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 65% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 65% 15%;
+    --primary: 187 95% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 222 65% 15%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 16% 47%;
     --accent: 262 80% 62%;
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 15% 16%;
-    --input: 240 15% 16%;
-    --ring: 187 95% 55%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 187 95% 45%;
     --radius: 0.75rem;
 
-    --wizao-cyan: 187 95% 55%;
-    --wizao-cyan-dim: 187 70% 45%;
+    --wizao-cyan: 187 95% 45%;
+    --wizao-cyan-bright: 190 100% 44%;
     --wizao-violet: 262 80% 62%;
     --wizao-violet-dim: 262 60% 50%;
+    --wizao-ink: 222 65% 15%;
   }
 }
 
@@ -44,6 +45,22 @@
   }
 }
 
+@layer utilities {
+  /* grid sutil estilo insecap (hero oscuro) */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgb(255 255 255 / 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .bg-grid-dark {
+    background-image:
+      linear-gradient(to right, hsl(var(--wizao-ink) / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--wizao-ink) / 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}
+
 /* scrollbar sutil */
 ::-webkit-scrollbar {
   width: 8px;
@@ -56,11 +73,11 @@
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--wizao-cyan-dim));
+  background: hsl(var(--wizao-cyan));
 }
 
 /* selección */
 ::selection {
-  background: hsl(var(--wizao-cyan) / 0.3);
-  color: white;
+  background: hsl(var(--wizao-cyan) / 0.25);
+  color: hsl(var(--wizao-ink));
 }

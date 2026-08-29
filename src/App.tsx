@@ -23,6 +23,10 @@ import {
   Users,
   Puzzle,
   SlidersHorizontal,
+  Building2,
+  MapPin,
+  Award,
+  MessageSquareText,
 } from "lucide-react";
 
 function SpotifyIcon({ className }: { className?: string }) {
@@ -43,6 +47,13 @@ const socials = [
   { name: "LinkedIn", href: "https://www.linkedin.com/", icon: Linkedin },
 ];
 
+const stats = [
+  { icon: Building2, value: "16+", label: "años de trayectoria OTEC" },
+  { icon: MapPin, value: "13+", label: "sucursales conectadas" },
+  { icon: MessageSquareText, value: "18.000+", label: "mensajes analizados" },
+  { icon: Users, value: "4", label: "personas en el equipo TICA" },
+];
+
 const facets = [
   {
     id: "ingeniero",
@@ -50,18 +61,19 @@ const facets = [
     icon: Code2,
     title: "El Ingeniero",
     desc: "Líder de Área TICA en INSECAP S.p.A. — OTEC chilena con 16 años, 13+ sucursales, regulada por SENCE. Convierto problemas operativos recurrentes en sistemas estructurados.",
-    color: "from-cyan-400/20 to-cyan-600/5",
-    accent: "text-cyan-400",
-    border: "hover:border-cyan-400/40",
+    accent: "text-cyan-500",
+    iconBg: "bg-cyan-50 text-cyan-600",
+    border: "hover:border-cyan-300",
     items: [
       { icon: Briefcase, title: "Rol actual", text: "Líder de Área TICA en INSECAP S.p.A. — equipo de 4: Luis (TMS/Moodle), Renato (arquitectura e infraestructura), Ernes (TMS/TMS Plus/SAP) y yo, transversal." },
       { icon: Cpu, title: "Stack", text: ".NET (4.7.2 → moderno) · Entity Framework · Razor MVC · SQL Server · Azure (IIS, Blob, VMs, NSG) · NestJS + Prisma + PostgreSQL · Hetzner · Vultr" },
-      { icon: SlidersHorizontal, title: "SAP", text: "Parametrizador SAP — implementación y soporte de módulos, integración con el ecosistema TMS y procesos de negocio." },
       { icon: Database, title: "TMS / TMS Plus", text: "ERP interno de capacitación: cotización → comercialización → participantes → credenciales/SENCE/Moodle. QA automatizado (xUnit, FluentAssertions, Bogus) + CI/CD bloqueante." },
-      { icon: Puzzle, title: "Plugins Moodle", text: "Desarrollo a medida sobre portal.insecap.cl: plugins de feedback y quiz multilingüe, migración a Moodle 5.1 — QA automatizado con mi skill review-curso-moodle." },
+      { icon: SlidersHorizontal, title: "SAP", text: "Parametrizador SAP — implementación y soporte de módulos, integración con el ecosistema TMS y procesos de negocio." },
+      { icon: GraduationCap, title: "Moodle", text: "portal.insecap.cl — migración a Moodle 5.1, quiz multilingüe y plugins de feedback." },
+      { icon: Puzzle, title: "Plugins Moodle", text: "Desarrollo a medida: plugins de feedback y quiz multilingüe, migración a Moodle 5.1 — QA automatizado con mi skill review-curso-moodle." },
       { icon: Bot, title: "IA agéntica", text: "Anthropic SDK · Claude Code · MCP · Skills — siguiendo el AI Engineering Skills Map de Andrew Ng." },
       { icon: Cloud, title: "Infraestructura", text: "Tailscale multi-sucursal (13 sedes, CCTV Hikvision), Starlink, Azure DNS, SSL Sectigo, SPF/DKIM/DMARC, n8n, Google Workspace." },
-      { icon: Users, title: "Calidad", text: "ISO 9001 / NCh2728:2015 · auditorías SICEP · checklists de verificación normativa." },
+      { icon: Award, title: "Calidad", text: "ISO 9001 / NCh2728:2015 · auditorías SICEP · checklists de verificación normativa." },
       { icon: Rocket, title: "Hitos", text: "HackaDISC 2026 con UCN — INSECAP aportó el desafío de predicción de ventas; fui jurado." },
     ],
   },
@@ -71,13 +83,13 @@ const facets = [
     icon: Rocket,
     title: "El Emprendedor",
     desc: "Proyectos donde la tecnología resuelve problemas reales: de la comparación de compras a la analítica de reclamos.",
-    color: "from-violet-400/20 to-violet-600/5",
-    accent: "text-violet-400",
-    border: "hover:border-violet-400/40",
+    accent: "text-violet-500",
+    iconBg: "bg-violet-50 text-violet-600",
+    border: "hover:border-violet-300",
     items: [
       { icon: Sparkles, title: "COTIZA", text: "Plataforma formal de comparación de procesos de compra — 14 entidades, plan de 7 fases." },
-      { icon: Users, title: "Analítica de reclamos", text: "8 canales de WhatsApp, ~18.000 mensajes → dashboard HTML + PPT accionable." },
-      { icon: Database, title: "Optimización Azure", text: "Discos huérfanos, backups duplicados y latencia cross-region — menos costo, más performance." },
+      { icon: MessageSquareText, title: "Analítica de reclamos", text: "8 canales de WhatsApp, ~18.000 mensajes → dashboard HTML + PPT accionable." },
+      { icon: Cloud, title: "Optimización Azure", text: "Discos huérfanos, backups duplicados y latencia cross-region — menos costo, más performance." },
       { icon: Rocket, title: "Skills propias", text: "review-curso-moodle (QA automatizado de evaluaciones) · guiones-ads-redes · HackaDISC UCN (desafío de predicción de ventas, jurado)" },
     ],
   },
@@ -87,9 +99,9 @@ const facets = [
     icon: Mic,
     title: "El Comunicador",
     desc: "Divulgo lo que sé: capacitación, industria, tecnología y el futuro del trabajo.",
-    color: "from-sky-400/20 to-sky-600/5",
-    accent: "text-sky-400",
-    border: "hover:border-sky-400/40",
+    accent: "text-sky-500",
+    iconBg: "bg-sky-50 text-sky-600",
+    border: "hover:border-sky-300",
     items: [
       { icon: Mic, title: "Podcast", text: "«Hablemos de Capacitación» — conversaciones que transforman experiencias en aprendizaje." },
       { icon: MonitorPlay, title: "Canal INSECAP", text: "@InsecapCapacitacion — contenido educativo técnico, cursos y cápsulas." },
@@ -103,9 +115,9 @@ const facets = [
     icon: Gamepad2,
     title: "El Creador — Wizao",
     desc: "Más de 10 años creando en internet: YouTube, música, gaming y efectos especiales.",
-    color: "from-fuchsia-400/20 to-fuchsia-600/5",
-    accent: "text-fuchsia-400",
-    border: "hover:border-fuchsia-400/40",
+    accent: "text-fuchsia-500",
+    iconBg: "bg-fuchsia-50 text-fuchsia-600",
+    border: "hover:border-fuchsia-300",
     items: [
       { icon: Youtube, title: "YouTube", text: "Canal activo desde ~2012: vlogs, efectos especiales, gaming y música." },
       { icon: Music, title: "Música", text: "Disponible en Spotify — Tu Esencia (2020) y más lanzamientos." },
@@ -116,14 +128,14 @@ const facets = [
 ];
 
 const facetLinks: Record<string, { label: string; href: string }[]> = {
+  ingeniero: [
+    { label: "INSECAP →", href: "https://www.insecap.cl" },
+    { label: "portal.insecap.cl (Moodle) →", href: "https://portal.insecap.cl" },
+  ],
   emprendedor: [{ label: "cotizasmart.cl →", href: "https://cotizasmart.cl" }],
   comunicador: [
     { label: "Playlist podcast →", href: "https://www.youtube.com/playlist?list=PLEFHa-sTHvG2aDlqufBAD1mWdSTZdvxom" },
     { label: "@InsecapCapacitacion →", href: "https://www.youtube.com/@InsecapCapacitacion" },
-  ],
-  ingeniero: [
-    { label: "INSECAP →", href: "https://www.insecap.cl" },
-    { label: "portal.insecap.cl (Moodle) →", href: "https://portal.insecap.cl" },
   ],
   creador: [
     { label: "Canal YouTube →", href: "https://www.youtube.com/c/OWizao" },
@@ -132,70 +144,84 @@ const facetLinks: Record<string, { label: string; href: string }[]> = {
   ],
 };
 
+const fadeUp = {
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-80px" },
+  transition: { duration: 0.5, ease: "easeOut" as const },
+};
+
 export default function App() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
-      {/* fondo con glow */}
-      <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-[120px] animate-pulse-glow" />
-        <div className="absolute top-1/3 -right-40 h-[500px] w-[500px] rounded-full bg-violet-500/10 blur-[120px] animate-pulse-glow" />
-      </div>
-
       {/* NAV */}
-      <header className="fixed top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-md">
+      <header className="fixed top-0 z-50 w-full border-b border-border/70 bg-background/85 backdrop-blur-md">
         <div className="container flex h-16 items-center justify-between">
-          <a href="#top" className="flex items-center gap-2 font-bold tracking-tight">
-            <span className="text-cyan-400">wizao</span>
-            <span className="text-muted-foreground">.cl</span>
+          <a href="#top" className="flex items-center gap-1 text-lg font-extrabold tracking-tight">
+            <span className="bg-gradient-to-r from-cyan-500 to-violet-500 bg-clip-text text-transparent">wizao</span>
+            <span className="font-normal text-muted-foreground">.cl</span>
           </a>
-          <nav className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
+          <nav className="hidden items-center gap-7 text-sm font-medium text-muted-foreground md:flex">
             {facets.map((f) => (
               <a key={f.id} href={`#${f.id}`} className="transition-colors hover:text-foreground">
-                {f.title.replace("El ", "").replace("La ", "")}
+                {f.title.replace("El ", "").replace("La ", "").replace(" — Wizao", "")}
               </a>
             ))}
-            <a href="#contacto" className="rounded-full bg-primary px-4 py-1.5 font-semibold text-primary-foreground transition hover:bg-cyan-300">
+            <a
+              href="#contacto"
+              className="rounded-full bg-primary px-5 py-2 font-semibold text-primary-foreground shadow-sm transition hover:shadow-md hover:brightness-105"
+            >
               Contacto
             </a>
           </nav>
         </div>
       </header>
 
-      {/* HERO */}
-      <section id="top" className="relative flex min-h-screen items-center pt-16">
-        <div className="container">
+      {/* HERO — oscuro con grid, estilo insecap */}
+      <section id="top" className="relative overflow-hidden bg-[#0f1a2e] text-white">
+        <div className="absolute inset-0 bg-grid" />
+        <div className="pointer-events-none absolute -top-32 left-1/4 h-[420px] w-[420px] rounded-full bg-cyan-400/20 blur-[130px]" />
+        <div className="pointer-events-none absolute -bottom-32 right-1/4 h-[420px] w-[420px] rounded-full bg-violet-500/25 blur-[130px]" />
+        <div className="container relative flex min-h-[88vh] flex-col justify-center py-28">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="font-mono text-sm text-cyan-400">// hola, soy</p>
-            <h1 className="mt-3 text-5xl font-extrabold leading-tight md:text-7xl">
-              Wilson <span className="bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">Carvajal</span>
+            <p className="font-mono text-sm text-cyan-300">// hola, soy</p>
+            <h1 className="mt-3 text-5xl font-extrabold leading-tight tracking-tight md:text-7xl">
+              Wilson{" "}
+              <span className="bg-gradient-to-r from-cyan-300 to-violet-400 bg-clip-text text-transparent">
+                Carvajal
+              </span>
             </h1>
-            <p className="mt-4 max-w-2xl text-lg text-muted-foreground md:text-xl">
+            <p className="mt-5 max-w-2xl text-lg text-slate-300 md:text-xl">
               Ingeniero Civil en Computación · Líder de Área TICA en INSECAP · Creador digital
             </p>
-            <p className="mt-2 text-muted-foreground">
-              <span className="font-semibold text-cyan-300">Sistematizador:</span> convierto problemas operativos recurrentes en sistemas estructurados.
+            <p className="mt-3 max-w-2xl text-muted-foreground text-slate-400">
+              <span className="font-semibold text-cyan-300">Sistematizador:</span> convierto problemas
+              operativos recurrentes en sistemas estructurados.
             </p>
-            <p className="mt-1 text-sm text-muted-foreground">
-              Cuatro facetas, una sola marca: <span className="font-semibold text-foreground">Wizao</span>
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a href="#contacto" className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground transition hover:bg-cyan-300">
+            <div className="mt-9 flex flex-wrap gap-4">
+              <a
+                href="#contacto"
+                className="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-7 py-3 font-semibold text-[#0f1a2e] shadow-lg shadow-cyan-400/25 transition hover:bg-cyan-300"
+              >
                 Hablemos <ArrowRight className="h-4 w-4" />
               </a>
-              <a href="#ingeniero" className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 font-semibold transition hover:border-cyan-400/40 hover:text-cyan-300">
+              <a
+                href="#ingeniero"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-3 font-semibold backdrop-blur-sm transition hover:border-cyan-300/50 hover:text-cyan-200"
+              >
                 Conóceme
               </a>
             </div>
-            <div className="mt-10 flex flex-wrap gap-3">
+            <div className="mt-12 flex flex-wrap gap-3">
               {socials.map((s) => (
                 <a
                   key={s.name}
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-border bg-card/50 px-4 py-2 text-sm text-muted-foreground transition hover:border-cyan-400/40 hover:text-foreground"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300 backdrop-blur-sm transition hover:border-cyan-300/40 hover:text-white"
                 >
-                  <s.icon className="h-4 w-4 text-cyan-400" />
+                  <s.icon className="h-4 w-4 text-cyan-300" />
                   {s.name}
                 </a>
               ))}
@@ -204,81 +230,120 @@ export default function App() {
         </div>
       </section>
 
-      {/* FACETAS */}
-      {facets.map((f, idx) => (
-        <section key={f.id} id={f.id} className={`relative py-24 ${idx % 2 === 1 ? "bg-card/30" : ""}`}>
-          <div className="container">
+      {/* STATS — tira de métricas */}
+      <section className="border-b border-border/70 bg-card">
+        <div className="container grid grid-cols-2 gap-6 py-10 md:grid-cols-4">
+          {stats.map((s, i) => (
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              key={s.label}
+              {...fadeUp}
+              transition={{ duration: 0.4, delay: i * 0.06 }}
+              className="flex items-center gap-3"
             >
-              <span className={`font-mono text-xs ${f.accent}`}>{f.tag}</span>
-              <h2 className="mt-2 text-4xl font-bold md:text-5xl">
-                <f.icon className="mr-3 inline h-8 w-8" />
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-secondary text-cyan-500">
+                <s.icon className="h-5 w-5" />
+              </span>
+              <div>
+                <p className="text-xl font-extrabold leading-none">{s.value}</p>
+                <p className="mt-1 text-xs text-muted-foreground">{s.label}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* FACETAS — secciones claras con tarjetas blancas */}
+      {facets.map((f, idx) => (
+        <section key={f.id} id={f.id} className={`py-24 ${idx % 2 === 1 ? "bg-secondary/40" : "bg-background"}`}>
+          <div className="container">
+            <motion.div {...fadeUp}>
+              <span className={`font-mono text-xs font-semibold uppercase tracking-wider ${f.accent}`}>
+                {f.tag}
+              </span>
+              <h2 className="mt-2 text-4xl font-extrabold tracking-tight md:text-5xl">
+                <f.icon className={`mr-3 inline h-8 w-8 ${f.accent}`} />
                 {f.title}
               </h2>
-              <p className="mt-3 max-w-2xl text-muted-foreground">{f.desc}</p>
+              <p className="mt-4 max-w-2xl text-muted-foreground">{f.desc}</p>
             </motion.div>
 
-            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {f.items.map((item, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.08 }}
-                  className={`rounded-xl border border-border bg-gradient-to-br ${f.color} p-6 backdrop-blur-sm transition ${f.border}`}
+                  {...fadeUp}
+                  transition={{ duration: 0.4, delay: (i % 3) * 0.07 }}
+                  className={`group rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md ${f.border}`}
                 >
-                  <item.icon className={`h-6 w-6 ${f.accent}`} />
-                  <h3 className="mt-3 font-semibold">{item.title}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{item.text}</p>
+                  <span className={`inline-flex h-11 w-11 items-center justify-center rounded-xl ${f.iconBg}`}>
+                    <item.icon className="h-5 w-5" />
+                  </span>
+                  <h3 className="mt-4 font-semibold">{item.title}</h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
                 </motion.div>
               ))}
             </div>
 
             {facetLinks[f.id] && (
-              <div className="mt-6 flex flex-wrap gap-3">
+              <motion.div {...fadeUp} className="mt-8 flex flex-wrap gap-5">
                 {facetLinks[f.id].map((l) => (
                   <a
                     key={l.href}
                     href={l.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-1.5 text-sm font-medium ${f.accent} hover:underline`}
+                    className={`inline-flex items-center gap-1.5 text-sm font-semibold ${f.accent} hover:underline`}
                   >
                     {l.label}
                   </a>
                 ))}
-              </div>
+              </motion.div>
             )}
           </div>
         </section>
       ))}
 
-      {/* CONTACTO */}
-      <section id="contacto" className="relative py-24">
-        <div className="container text-center">
-          <span className="font-mono text-xs text-cyan-400">Contacto</span>
-          <h2 className="mt-2 text-4xl font-bold md:text-5xl">Hablemos 🤝</h2>
-          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-            ¿Proyecto, colaboración, podcast, música o simplemente saludar? Mi inbox está abierto.
-          </p>
-          <div className="mt-8">
-            <a
-              href="mailto:hola@wizao.cl"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground transition hover:bg-cyan-300"
-            >
-              <Mail className="h-5 w-5" /> hola@wizao.cl
-            </a>
-          </div>
-          <p className="mt-16 text-sm text-muted-foreground">
-            wizao.cl — Wilson Carvajal Rozas · Hecho con 🤖 y ☕
-          </p>
+      {/* CONTACTO — CTA oscuro estilo insecap */}
+      <section id="contacto" className="py-24">
+        <div className="container">
+          <motion.div
+            {...fadeUp}
+            className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0f1a2e] via-[#16294a] to-[#1e3a5f] px-8 py-16 text-center text-white md:py-20"
+          >
+            <div className="absolute inset-0 bg-grid opacity-60" />
+            <div className="pointer-events-none absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/20 blur-[100px]" />
+            <div className="relative">
+              <span className="font-mono text-xs font-semibold uppercase tracking-wider text-cyan-300">
+                Contacto
+              </span>
+              <h2 className="mt-3 text-4xl font-extrabold tracking-tight md:text-5xl">
+                Hablemos <span className="text-cyan-300">🤝</span>
+              </h2>
+              <p className="mx-auto mt-4 max-w-xl text-slate-300">
+                ¿Proyecto, colaboración, podcast, música o simplemente saludar? Mi inbox está abierto.
+              </p>
+              <div className="mt-9">
+                <a
+                  href="mailto:hola@wizao.cl"
+                  className="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-8 py-4 text-lg font-bold text-[#0f1a2e] shadow-lg shadow-cyan-400/30 transition hover:bg-cyan-300"
+                >
+                  <Mail className="h-5 w-5" /> hola@wizao.cl
+                </a>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
+
+      {/* FOOTER — gradiente navy */}
+      <footer className="bg-gradient-to-br from-[#0f1a2e] via-[#16294a] to-[#1e3a5f] py-10 text-center text-sm text-slate-400">
+        <div className="container">
+          <p>
+            wizao.cl — Wilson Carvajal Rozas · Hecho con <span className="text-cyan-300">🤖</span> y{" "}
+            <span className="text-violet-300">☕</span>
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
