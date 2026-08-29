@@ -267,6 +267,26 @@ export default function App() {
         </div>
       </section>
 
+      {/* COBERTURA — SEO local visible: todo Chile + Antofagasta/Calama + minería */}
+      <section className="border-y border-border/60 bg-card/60">
+        <div className="container flex flex-wrap items-center justify-center gap-x-8 gap-y-3 py-5 text-sm text-muted-foreground">
+          <span className="inline-flex items-center gap-2">
+            <MapPin className="h-4 w-4 text-red-400" />
+            <span className="font-semibold text-foreground">Cobertura nacional</span> — todo Chile
+          </span>
+          <span className="hidden h-4 w-px bg-border sm:block" />
+          <span className="inline-flex items-center gap-2">
+            <Building2 className="h-4 w-4 text-violet-400" />
+            Base en <span className="font-semibold text-foreground">Antofagasta · Calama</span>
+          </span>
+          <span className="hidden h-4 w-px bg-border sm:block" />
+          <span className="inline-flex items-center gap-2">
+            <Award className="h-4 w-4 text-red-400" />
+            Foco en <span className="font-semibold text-foreground">industria minera</span>
+          </span>
+        </div>
+      </section>
+
       {/* FACETAS — tarjetas oscuras con acentos rojo/morado */}
       {facets.map((f, idx) => (
         <section key={f.id} id={f.id} className={`py-24 ${idx % 2 === 1 ? "bg-card/40" : "bg-background"}`}>

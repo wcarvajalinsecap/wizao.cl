@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO básico -->
-    <title>Wilson Carvajal (Wizao) — Ingeniero Civil en Computación · Líder TICA en INSECAP</title>
+    <title>Wilson Carvajal (Wizao) — Soluciones de Software · Antofagasta · Minería · Todo Chile</title>
     <meta
       name="description"
-      content="Wilson Carvajal Rozas (Wizao) — Ingeniero Civil en Computación e Informática, Líder de Área TICA en INSECAP. Sistematizador: convierto problemas operativos en sistemas. Desarrollo .NET, Moodle, SAP, IA y más."
+      content="Wilson Carvajal Rozas (Wizao) — Ingeniero Civil en Computación, Líder de Área TICA en INSECAP. Soluciones de software, automatización y capacitación para todo Chile, con foco en Antofagasta, Calama y la industria minera. Desarrollo .NET, Moodle, SAP y más."
+    />
+    <meta
+      name="keywords"
+      content="desarrollo de software Antofagasta, soluciones tecnológicas minería Chile, ingeniero informático Antofagasta, capacitación Calama, OTEC Antofagasta, automatización minería, Wilson Carvajal, Wizao"
     />
     <meta name="author" content="Wilson Carvajal Rozas" />
     <meta name="robots" content="index, follow" />
@@ -20,24 +24,24 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Wizao" />
     <meta property="og:locale" content="es_CL" />
-    <meta property="og:title" content="Wilson Carvajal (Wizao) — Ingeniero Civil en Computación · Líder TICA en INSECAP" />
+    <meta property="og:title" content="Wilson Carvajal (Wizao) — Soluciones de Software · Antofagasta · Minería · Todo Chile" />
     <meta
       property="og:description"
-      content="Sistematizador: convierto problemas operativos recurrentes en sistemas estructurados. Ingeniero, emprendedor, comunicador y creador."
+      content="Soluciones de software y automatización para todo Chile, con foco en Antofagasta, Calama y la minería. Sistematizador: convierto problemas operativos recurrentes en sistemas."
     />
     <meta property="og:url" content="https://wizao.cl/" />
     <meta property="og:image" content="https://wizao.cl/og-image.png" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Wilson Carvajal (Wizao) — Ingeniero · Emprendedor · Comunicador · Creador" />
+    <meta name="twitter:title" content="Wilson Carvajal (Wizao) — Soluciones de Software · Antofagasta · Minería · Todo Chile" />
     <meta
       name="twitter:description"
-      content="Sistematizador: convierto problemas operativos recurrentes en sistemas estructurados. Líder de Área TICA en INSECAP."
+      content="Soluciones de software y automatización para todo Chile, con foco en Antofagasta, Calama y la minería."
     />
     <meta name="twitter:image" content="https://wizao.cl/og-image.png" />
 
-    <!-- Datos estructurados: Person -->
+    <!-- Datos estructurados: Person + cobertura geográfica -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -50,8 +54,34 @@
         "worksFor": {
           "@type": "Organization",
           "name": "INSECAP S.p.A.",
-          "url": "https://www.insecap.cl"
+          "url": "https://www.insecap.cl",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "CL",
+            "addressRegion": "Antofagasta"
+          }
         },
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CL",
+          "addressRegion": "Antofagasta",
+          "addressLocality": "Antofagasta"
+        },
+        "areaServed": [
+          { "@type": "Country", "name": "Chile" },
+          { "@type": "City", "name": "Antofagasta" },
+          { "@type": "City", "name": "Calama" }
+        ],
+        "knowsAbout": [
+          "Desarrollo de software",
+          "Automatización de procesos",
+          "Industria minera",
+          "Capacitación OTEC",
+          "Sistemas ERP (TMS)",
+          "Moodle / e-learning",
+          "SAP",
+          "Infraestructura tecnológica"
+        ],
         "alumniOf": {
           "@type": "CollegeOrUniversity",
           "name": "Ingeniería Civil en Computación e Informática"
@@ -64,6 +94,39 @@
           "https://open.spotify.com/artist/0InHZv430Rp7Y2AM42lGA0",
           "https://soundcloud.com/wizao"
         ]
+      }
+    </script>
+
+    <!-- Datos estructurados: Servicio profesional con cobertura -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Wizao — Soluciones de Software",
+        "url": "https://wizao.cl/",
+        "email": "mailto:hola@wizao.cl",
+        "description": "Soluciones de software, automatización y capacitación tecnológica para todo Chile, con base en Antofagasta y Calama y foco en la industria minera.",
+        "areaServed": [
+          { "@type": "Country", "name": "Chile" },
+          { "@type": "City", "name": "Antofagasta" },
+          { "@type": "City", "name": "Calama" }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CL",
+          "addressRegion": "Antofagasta",
+          "addressLocality": "Antofagasta"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -23.6509,
+          "longitude": -70.3975
+        },
+        "provider": {
+          "@type": "Person",
+          "name": "Wilson Carvajal Rozas",
+          "url": "https://wizao.cl/"
+        }
       }
     </script>
   </head>
