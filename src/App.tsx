@@ -47,15 +47,19 @@ const facets = [
     tag: "Faceta 01",
     icon: Code2,
     title: "El Ingeniero",
-    desc: "Software Developer en INSECAP Capacitación. Construyo y opero los sistemas que hacen funcionar la capacitación de punta a punta.",
+    desc: "Líder de Área TICA en INSECAP S.p.A. — OTEC chilena con 16 años, 13+ sucursales, regulada por SENCE. Convierto problemas operativos recurrentes en sistemas estructurados.",
     color: "from-cyan-400/20 to-cyan-600/5",
     accent: "text-cyan-400",
     border: "hover:border-cyan-400/40",
     items: [
-      { icon: Briefcase, title: "Rol actual", text: "Software Developer — INSECAP Capacitación. Liderazgo técnico en TICA / Informática." },
-      { icon: Cpu, title: "Stack", text: "TMS · Moodle / E-learning · SQL · C# · Azure / IIS · automatizaciones e integraciones" },
-      { icon: Bot, title: "Proyectos", text: "RelatoresYa · CAPIN IA · automatización de certificación" },
-      { icon: GraduationCap, title: "Hitos", text: "Jurado en HackaDisc UCN (2025) — creé el dataset y planteé el reto" },
+      { icon: Briefcase, title: "Rol actual", text: "Líder de Área TICA en INSECAP S.p.A. — equipo de 4: Luis (TMS/Moodle), Renato (arquitectura e infraestructura), Ernes (TMS/TMS Plus/SAP) y yo, transversal." },
+      { icon: Cpu, title: "Stack", text: ".NET (4.7.2 → moderno) · Entity Framework · Razor MVC · SQL Server · Azure (IIS, Blob, VMs, NSG) · NestJS + Prisma + PostgreSQL · Hetzner · Vultr" },
+      { icon: Database, title: "TMS / TMS Plus", text: "ERP interno de capacitación: cotización → comercialización → participantes → credenciales/SENCE/Moodle. QA automatizado (xUnit, FluentAssertions, Bogus) + CI/CD bloqueante." },
+      { icon: GraduationCap, title: "Moodle", text: "portal.insecap.cl — migración a Moodle 5.1, quiz multilingüe y plugins de feedback." },
+      { icon: Bot, title: "IA agéntica", text: "Anthropic SDK · Claude Code · MCP · Skills — siguiendo el AI Engineering Skills Map de Andrew Ng." },
+      { icon: Cloud, title: "Infraestructura", text: "Tailscale multi-sucursal (13 sedes, CCTV Hikvision), Starlink, Azure DNS, SSL Sectigo, SPF/DKIM/DMARC, n8n, Google Workspace." },
+      { icon: Users, title: "Calidad", text: "ISO 9001 / NCh2728:2015 · auditorías SICEP · checklists de verificación normativa." },
+      { icon: Rocket, title: "Hitos", text: "HackaDISC 2026 con UCN — INSECAP aportó el desafío de predicción de ventas; fui jurado." },
     ],
   },
   {
@@ -63,15 +67,15 @@ const facets = [
     tag: "Faceta 02",
     icon: Rocket,
     title: "El Emprendedor",
-    desc: "Proyectos propios donde aplico tecnología para resolver problemas reales de la industria.",
+    desc: "Proyectos donde la tecnología resuelve problemas reales: de la comparación de compras a la analítica de reclamos.",
     color: "from-violet-400/20 to-violet-600/5",
     accent: "text-violet-400",
     border: "hover:border-violet-400/40",
     items: [
-      { icon: Sparkles, title: "CotizaSmart.cl", text: "Plataforma de cotizaciones comparativas con evaluación asistida por IA." },
-      { icon: Users, title: "Multi-tenant", text: "Roles de administrador, ayudante y cliente — pensada para logística e industria." },
-      { icon: Database, title: "Stack", text: "Next.js · Supabase · IA · Cloudflare R2" },
-      { icon: Rocket, title: "Visión", text: "Automatizar los procesos de compra comparativa con IA." },
+      { icon: Sparkles, title: "COTIZA", text: "Plataforma formal de comparación de procesos de compra — 14 entidades, plan de 7 fases." },
+      { icon: Users, title: "Analítica de reclamos", text: "8 canales de WhatsApp, ~18.000 mensajes → dashboard HTML + PPT accionable." },
+      { icon: Database, title: "Optimización Azure", text: "Discos huérfanos, backups duplicados y latencia cross-region — menos costo, más performance." },
+      { icon: Rocket, title: "Skills propias", text: "review-curso-moodle (QA automatizado de evaluaciones) · guiones-ads-redes · HackaDISC UCN (desafío de predicción de ventas, jurado)" },
     ],
   },
   {
@@ -109,11 +113,14 @@ const facets = [
 ];
 
 const facetLinks: Record<string, { label: string; href: string }[]> = {
-  ingeniero: [{ label: "INSECAP", href: "https://www.insecap.cl" }],
   emprendedor: [{ label: "cotizasmart.cl →", href: "https://cotizasmart.cl" }],
   comunicador: [
     { label: "Playlist podcast →", href: "https://www.youtube.com/playlist?list=PLEFHa-sTHvG2aDlqufBAD1mWdSTZdvxom" },
     { label: "@InsecapCapacitacion →", href: "https://www.youtube.com/@InsecapCapacitacion" },
+  ],
+  ingeniero: [
+    { label: "INSECAP →", href: "https://www.insecap.cl" },
+    { label: "portal.insecap.cl (Moodle) →", href: "https://portal.insecap.cl" },
   ],
   creador: [
     { label: "Canal YouTube →", href: "https://www.youtube.com/c/OWizao" },
@@ -160,9 +167,12 @@ export default function App() {
               Wilson <span className="bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">Carvajal</span>
             </h1>
             <p className="mt-4 max-w-2xl text-lg text-muted-foreground md:text-xl">
-              Ingeniero Civil en Computación · Software Developer · Emprendedor · Creador digital
+              Ingeniero Civil en Computación · Líder de Área TICA en INSECAP · Creador digital
             </p>
             <p className="mt-2 text-muted-foreground">
+              <span className="font-semibold text-cyan-300">Sistematizador:</span> convierto problemas operativos recurrentes en sistemas estructurados.
+            </p>
+            <p className="mt-1 text-sm text-muted-foreground">
               Cuatro facetas, una sola marca: <span className="font-semibold text-foreground">Wizao</span>
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
