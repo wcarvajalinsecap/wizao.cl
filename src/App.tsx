@@ -17,7 +17,6 @@ import {
   Cpu,
   Database,
   Cloud,
-  Bot,
   Briefcase,
   GraduationCap,
   Users,
@@ -62,7 +61,6 @@ const stats = [
   { icon: Building2, value: INSECAP_YEARS, suffix: "+", label: "años de trayectoria OTEC" },
   { icon: MapPin, value: 13, suffix: "+", label: "sucursales conectadas" },
   { icon: MessageSquareText, value: 18000, suffix: "+", label: "mensajes analizados" },
-  { icon: Users, value: 4, suffix: "", label: "personas en el equipo TICA" },
 ];
 
 const facets = [
@@ -82,7 +80,6 @@ const facets = [
       { icon: SlidersHorizontal, title: "SAP", text: "Parametrizador SAP — implementación y soporte de módulos, integración con el ecosistema TMS y procesos de negocio." },
       { icon: GraduationCap, title: "Moodle", text: "portal.insecap.cl — migración a Moodle 5.1, quiz multilingüe y plugins de feedback." },
       { icon: Puzzle, title: "Plugins Moodle", text: "Desarrollo a medida: plugins de feedback y quiz multilingüe, migración a Moodle 5.1 — QA automatizado con mi skill review-curso-moodle." },
-      { icon: Bot, title: "IA agéntica", text: "Anthropic SDK · Claude Code · MCP · Skills — siguiendo el AI Engineering Skills Map de Andrew Ng." },
       { icon: Cloud, title: "Infraestructura", text: "Tailscale multi-sucursal (13 sedes, CCTV Hikvision), Starlink, Azure DNS, SSL Sectigo, SPF/DKIM/DMARC, n8n, Google Workspace." },
       { icon: Award, title: "Calidad", text: "ISO 9001 / NCh2728:2015 · auditorías SICEP · checklists de verificación normativa." },
       { icon: Rocket, title: "Hitos", text: "HackaDISC 2026 con UCN — INSECAP aportó el desafío de predicción de ventas; fui jurado." },
@@ -248,7 +245,7 @@ export default function App() {
 
       {/* STATS — banda gradiente rojo → morado con contadores animados */}
       <section className="relative overflow-hidden bg-gradient-to-r from-red-800 via-red-500 to-violet-600">
-        <div className="container grid grid-cols-2 gap-6 py-14 md:grid-cols-4">
+        <div className="container grid grid-cols-1 gap-6 py-14 sm:grid-cols-3">
           {stats.map((s, i) => (
             <motion.div
               key={s.label}
