@@ -55,7 +55,19 @@ export default {
           violet: "hsl(var(--wizao-violet))",
           "cyan-dim": "hsl(var(--wizao-cyan-dim))",
           "violet-dim": "hsl(var(--wizao-violet-dim))",
+          blue: "hsl(var(--wizao-blue))",
+          ink: "hsl(var(--wizao-ink))",
         },
+      },
+      boxShadow: {
+        card: "var(--shadow-card)",
+        hover: "var(--shadow-hover)",
+        cta: "var(--shadow-cta)",
+      },
+      backgroundImage: {
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-cta": "var(--gradient-cta)",
+        "gradient-footer": "var(--gradient-footer)",
       },
       borderRadius: {
         lg: "var(--radius)",

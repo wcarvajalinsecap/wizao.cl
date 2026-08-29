@@ -29,6 +29,9 @@ import {
   MessageSquareText,
 } from "lucide-react";
 
+import WaveDivider from "./components/WaveDivider";
+import { NumberTicker } from "./components/NumberTicker";
+
 function SpotifyIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
@@ -48,10 +51,10 @@ const socials = [
 ];
 
 const stats = [
-  { icon: Building2, value: "16+", label: "años de trayectoria OTEC" },
-  { icon: MapPin, value: "13+", label: "sucursales conectadas" },
-  { icon: MessageSquareText, value: "18.000+", label: "mensajes analizados" },
-  { icon: Users, value: "4", label: "personas en el equipo TICA" },
+  { icon: Building2, value: 16, suffix: "+", label: "años de trayectoria OTEC" },
+  { icon: MapPin, value: 13, suffix: "+", label: "sucursales conectadas" },
+  { icon: MessageSquareText, value: 18000, suffix: "+", label: "mensajes analizados" },
+  { icon: Users, value: 4, suffix: "", label: "personas en el equipo TICA" },
 ];
 
 const facets = [
@@ -230,23 +233,28 @@ export default function App() {
         </div>
       </section>
 
-      {/* STATS — tira de métricas */}
-      <section className="border-b border-border/70 bg-card">
-        <div className="container grid grid-cols-2 gap-6 py-10 md:grid-cols-4">
+      {/* ONDA — transición hero oscuro → secciones claras (Wave Rule de INSECAP) */}
+      <WaveDivider className="-mb-px" />
+
+      {/* STATS — banda gradiente con contadores animados (estilo insecap) */}
+      <section className="relative overflow-hidden bg-gradient-to-r from-[#2952cc] via-[#485CC7] to-[#00B8DE]">
+        <div className="container grid grid-cols-2 gap-6 py-14 md:grid-cols-4">
           {stats.map((s, i) => (
             <motion.div
               key={s.label}
               {...fadeUp}
-              transition={{ duration: 0.4, delay: i * 0.06 }}
-              className="flex items-center gap-3"
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+              className="flex flex-col items-center py-4 text-center"
             >
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-secondary text-cyan-500">
+              <span className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-white/15 text-white backdrop-blur-sm">
                 <s.icon className="h-5 w-5" />
               </span>
-              <div>
-                <p className="text-xl font-extrabold leading-none">{s.value}</p>
-                <p className="mt-1 text-xs text-muted-foreground">{s.label}</p>
-              </div>
+              <p className="text-3xl font-extrabold tabular-nums text-white md:text-4xl">
+                <NumberTicker value={s.value} className="text-white" suffix={s.suffix} />
+              </p>
+              <p className="mt-1 max-w-[150px] text-xs font-semibold leading-snug text-white/80">
+                {s.label}
+              </p>
             </motion.div>
           ))}
         </div>
