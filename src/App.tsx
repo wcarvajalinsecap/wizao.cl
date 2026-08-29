@@ -64,9 +64,9 @@ const facets = [
     icon: Code2,
     title: "El Ingeniero",
     desc: "Líder de Área TICA en INSECAP S.p.A. — OTEC chilena con 16 años, 13+ sucursales, regulada por SENCE. Convierto problemas operativos recurrentes en sistemas estructurados.",
-    accent: "text-cyan-500",
-    iconBg: "bg-cyan-50 text-cyan-600",
-    border: "hover:border-cyan-300",
+    accent: "text-red-400",
+    iconBg: "bg-red-500/10 text-red-400",
+    border: "hover:border-red-500/50",
     items: [
       { icon: Briefcase, title: "Rol actual", text: "Líder de Área TICA en INSECAP S.p.A. — equipo de 4: Luis (TMS/Moodle), Renato (arquitectura e infraestructura), Ernes (TMS/TMS Plus/SAP) y yo, transversal." },
       { icon: Cpu, title: "Stack", text: ".NET (4.7.2 → moderno) · Entity Framework · Razor MVC · SQL Server · Azure (IIS, Blob, VMs, NSG) · NestJS + Prisma + PostgreSQL · Hetzner · Vultr" },
@@ -86,9 +86,9 @@ const facets = [
     icon: Rocket,
     title: "El Emprendedor",
     desc: "Proyectos donde la tecnología resuelve problemas reales: de la comparación de compras a la analítica de reclamos.",
-    accent: "text-violet-500",
-    iconBg: "bg-violet-50 text-violet-600",
-    border: "hover:border-violet-300",
+    accent: "text-violet-400",
+    iconBg: "bg-violet-500/10 text-violet-400",
+    border: "hover:border-violet-500/50",
     items: [
       { icon: Sparkles, title: "COTIZA", text: "Plataforma formal de comparación de procesos de compra — 14 entidades, plan de 7 fases." },
       { icon: MessageSquareText, title: "Analítica de reclamos", text: "8 canales de WhatsApp, ~18.000 mensajes → dashboard HTML + PPT accionable." },
@@ -102,9 +102,9 @@ const facets = [
     icon: Mic,
     title: "El Comunicador",
     desc: "Divulgo lo que sé: capacitación, industria, tecnología y el futuro del trabajo.",
-    accent: "text-sky-500",
-    iconBg: "bg-sky-50 text-sky-600",
-    border: "hover:border-sky-300",
+    accent: "text-rose-400",
+    iconBg: "bg-rose-500/10 text-rose-400",
+    border: "hover:border-rose-500/50",
     items: [
       { icon: Mic, title: "Podcast", text: "«Hablemos de Capacitación» — conversaciones que transforman experiencias en aprendizaje." },
       { icon: MonitorPlay, title: "Canal INSECAP", text: "@InsecapCapacitacion — contenido educativo técnico, cursos y cápsulas." },
@@ -118,9 +118,9 @@ const facets = [
     icon: Gamepad2,
     title: "El Creador — Wizao",
     desc: "Más de 10 años creando en internet: YouTube, música, gaming y efectos especiales.",
-    accent: "text-fuchsia-500",
-    iconBg: "bg-fuchsia-50 text-fuchsia-600",
-    border: "hover:border-fuchsia-300",
+    accent: "text-fuchsia-400",
+    iconBg: "bg-fuchsia-500/10 text-fuchsia-400",
+    border: "hover:border-fuchsia-500/50",
     items: [
       { icon: Youtube, title: "YouTube", text: "Canal activo desde ~2012: vlogs, efectos especiales, gaming y música." },
       { icon: Music, title: "Música", text: "Disponible en Spotify — Tu Esencia (2020) y más lanzamientos." },
@@ -161,7 +161,7 @@ export default function App() {
       <header className="fixed top-0 z-50 w-full border-b border-border/70 bg-background/85 backdrop-blur-md">
         <div className="container flex h-16 items-center justify-between">
           <a href="#top" className="flex items-center gap-1 text-lg font-extrabold tracking-tight">
-            <span className="bg-gradient-to-r from-cyan-500 to-violet-500 bg-clip-text text-transparent">wizao</span>
+            <span className="bg-gradient-to-r from-red-500 to-violet-500 bg-clip-text text-transparent">wizao</span>
             <span className="font-normal text-muted-foreground">.cl</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm font-medium text-muted-foreground md:flex">
@@ -172,7 +172,7 @@ export default function App() {
             ))}
             <a
               href="#contacto"
-              className="rounded-full bg-primary px-5 py-2 font-semibold text-primary-foreground shadow-sm transition hover:shadow-md hover:brightness-105"
+              className="rounded-full bg-primary px-5 py-2 font-semibold text-primary-foreground shadow-cta transition hover:brightness-110"
             >
               Contacto
             </a>
@@ -180,37 +180,37 @@ export default function App() {
         </div>
       </header>
 
-      {/* HERO — oscuro con grid, estilo insecap */}
-      <section id="top" className="relative overflow-hidden bg-[#0f1a2e] text-white">
-        <div className="absolute inset-0 bg-grid" />
-        <div className="pointer-events-none absolute -top-32 left-1/4 h-[420px] w-[420px] rounded-full bg-cyan-400/20 blur-[130px]" />
-        <div className="pointer-events-none absolute -bottom-32 right-1/4 h-[420px] w-[420px] rounded-full bg-violet-500/25 blur-[130px]" />
+      {/* HERO — negro profundo con glow rojo/morado */}
+      <section id="top" className="relative overflow-hidden bg-[#0d0b1a] text-white">
+        <div className="absolute inset-0 bg-grid-dark" />
+        <div className="pointer-events-none absolute -top-32 left-1/4 h-[420px] w-[420px] rounded-full bg-red-500/15 blur-[130px]" />
+        <div className="pointer-events-none absolute -bottom-32 right-1/4 h-[420px] w-[420px] rounded-full bg-violet-600/20 blur-[130px]" />
         <div className="container relative flex min-h-[88vh] flex-col justify-center py-28">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="font-mono text-sm text-cyan-300">// hola, soy</p>
+            <p className="font-mono text-sm text-red-400">// hola, soy</p>
             <h1 className="mt-3 text-5xl font-extrabold leading-tight tracking-tight md:text-7xl">
               Wilson{" "}
-              <span className="bg-gradient-to-r from-cyan-300 to-violet-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-400 to-violet-400 bg-clip-text text-transparent">
                 Carvajal
               </span>
             </h1>
             <p className="mt-5 max-w-2xl text-lg text-slate-300 md:text-xl">
               Ingeniero Civil en Computación · Líder de Área TICA en INSECAP · Creador digital
             </p>
-            <p className="mt-3 max-w-2xl text-muted-foreground text-slate-400">
-              <span className="font-semibold text-cyan-300">Sistematizador:</span> convierto problemas
+            <p className="mt-3 max-w-2xl text-slate-400">
+              <span className="font-semibold text-red-400">Sistematizador:</span> convierto problemas
               operativos recurrentes en sistemas estructurados.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <a
                 href="#contacto"
-                className="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-7 py-3 font-semibold text-[#0f1a2e] shadow-lg shadow-cyan-400/25 transition hover:bg-cyan-300"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-500 to-violet-500 px-7 py-3 font-semibold text-white shadow-cta transition hover:brightness-110"
               >
                 Hablemos <ArrowRight className="h-4 w-4" />
               </a>
               <a
                 href="#ingeniero"
-                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-3 font-semibold backdrop-blur-sm transition hover:border-cyan-300/50 hover:text-cyan-200"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-3 font-semibold backdrop-blur-sm transition hover:border-red-400/50 hover:text-red-200"
               >
                 Conóceme
               </a>
@@ -222,9 +222,9 @@ export default function App() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300 backdrop-blur-sm transition hover:border-cyan-300/40 hover:text-white"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300 backdrop-blur-sm transition hover:border-red-400/40 hover:text-white"
                 >
-                  <s.icon className="h-4 w-4 text-cyan-300" />
+                  <s.icon className="h-4 w-4 text-red-400" />
                   {s.name}
                 </a>
               ))}
@@ -233,11 +233,11 @@ export default function App() {
         </div>
       </section>
 
-      {/* ONDA — transición hero oscuro → secciones claras (Wave Rule de INSECAP) */}
+      {/* ONDA — transición hero → stats (Wave Rule) */}
       <WaveDivider className="-mb-px" />
 
-      {/* STATS — banda gradiente con contadores animados (estilo insecap) */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-[#2952cc] via-[#485CC7] to-[#00B8DE]">
+      {/* STATS — banda gradiente rojo → morado con contadores animados */}
+      <section className="relative overflow-hidden bg-gradient-to-r from-red-800 via-red-500 to-violet-600">
         <div className="container grid grid-cols-2 gap-6 py-14 md:grid-cols-4">
           {stats.map((s, i) => (
             <motion.div
@@ -260,9 +260,9 @@ export default function App() {
         </div>
       </section>
 
-      {/* FACETAS — secciones claras con tarjetas blancas */}
+      {/* FACETAS — tarjetas oscuras con acentos rojo/morado */}
       {facets.map((f, idx) => (
-        <section key={f.id} id={f.id} className={`py-24 ${idx % 2 === 1 ? "bg-secondary/40" : "bg-background"}`}>
+        <section key={f.id} id={f.id} className={`py-24 ${idx % 2 === 1 ? "bg-card/40" : "bg-background"}`}>
           <div className="container">
             <motion.div {...fadeUp}>
               <span className={`font-mono text-xs font-semibold uppercase tracking-wider ${f.accent}`}>
@@ -281,7 +281,7 @@ export default function App() {
                   key={i}
                   {...fadeUp}
                   transition={{ duration: 0.4, delay: (i % 3) * 0.07 }}
-                  className={`group rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md ${f.border}`}
+                  className={`group rounded-2xl border border-border bg-card p-6 shadow-card transition hover:-translate-y-1 hover:shadow-hover ${f.border}`}
                 >
                   <span className={`inline-flex h-11 w-11 items-center justify-center rounded-xl ${f.iconBg}`}>
                     <item.icon className="h-5 w-5" />
@@ -311,21 +311,21 @@ export default function App() {
         </section>
       ))}
 
-      {/* CONTACTO — CTA oscuro estilo insecap */}
+      {/* CONTACTO — CTA con gradiente rojo/morado */}
       <section id="contacto" className="py-24">
         <div className="container">
           <motion.div
             {...fadeUp}
-            className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0f1a2e] via-[#16294a] to-[#1e3a5f] px-8 py-16 text-center text-white md:py-20"
+            className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#150d24] via-[#3b0d1a] to-[#1e1035] px-8 py-16 text-center text-white md:py-20"
           >
-            <div className="absolute inset-0 bg-grid opacity-60" />
-            <div className="pointer-events-none absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/20 blur-[100px]" />
+            <div className="absolute inset-0 bg-grid-dark opacity-60" />
+            <div className="pointer-events-none absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-red-500/20 blur-[100px]" />
             <div className="relative">
-              <span className="font-mono text-xs font-semibold uppercase tracking-wider text-cyan-300">
+              <span className="font-mono text-xs font-semibold uppercase tracking-wider text-red-400">
                 Contacto
               </span>
               <h2 className="mt-3 text-4xl font-extrabold tracking-tight md:text-5xl">
-                Hablemos <span className="text-cyan-300">🤝</span>
+                Hablemos <span className="text-red-400">🤝</span>
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-slate-300">
                 ¿Proyecto, colaboración, podcast, música o simplemente saludar? Mi inbox está abierto.
@@ -333,7 +333,7 @@ export default function App() {
               <div className="mt-9">
                 <a
                   href="mailto:hola@wizao.cl"
-                  className="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-8 py-4 text-lg font-bold text-[#0f1a2e] shadow-lg shadow-cyan-400/30 transition hover:bg-cyan-300"
+                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-500 to-violet-500 px-8 py-4 text-lg font-bold text-white shadow-cta transition hover:brightness-110"
                 >
                   <Mail className="h-5 w-5" /> hola@wizao.cl
                 </a>
@@ -343,12 +343,12 @@ export default function App() {
         </div>
       </section>
 
-      {/* FOOTER — gradiente navy */}
-      <footer className="bg-gradient-to-br from-[#0f1a2e] via-[#16294a] to-[#1e3a5f] py-10 text-center text-sm text-slate-400">
+      {/* FOOTER — gradiente negro → rojo oscuro → morado oscuro */}
+      <footer className="bg-gradient-to-br from-[#0d0b1a] via-[#2d0a12] to-[#1e1035] py-10 text-center text-sm text-slate-400">
         <div className="container">
           <p>
-            wizao.cl — Wilson Carvajal Rozas · Hecho con <span className="text-cyan-300">🤖</span> y{" "}
-            <span className="text-violet-300">☕</span>
+            wizao.cl — Wilson Carvajal Rozas · Hecho con <span className="text-red-400">🤖</span> y{" "}
+            <span className="text-violet-400">☕</span>
           </p>
         </div>
       </footer>

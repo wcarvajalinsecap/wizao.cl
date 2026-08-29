@@ -51,11 +51,10 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         wizao: {
-          cyan: "hsl(var(--wizao-cyan))",
+          red: "hsl(var(--wizao-red))",
           violet: "hsl(var(--wizao-violet))",
-          "cyan-dim": "hsl(var(--wizao-cyan-dim))",
+          "red-deep": "hsl(var(--wizao-red-deep))",
           "violet-dim": "hsl(var(--wizao-violet-dim))",
-          blue: "hsl(var(--wizao-blue))",
           ink: "hsl(var(--wizao-ink))",
         },
       },
