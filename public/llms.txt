@@ -48,3 +48,11 @@ Wilson Carvajal Rozas (alias Wizao) es un ingeniero informático chileno. Se aut
 
 - Email: hola@wizao.cl
 - WhatsApp: https://wa.me/56994122686
+
+## Servicios (páginas)
+
+- [Desarrollo de software a medida en Antofagasta](https://wizao.cl/servicios/desarrollo-software-antofagasta)
+- [Automatización de procesos para minería](https://wizao.cl/servicios/automatizacion-procesos-mineria)
+- [Plataformas e-learning y Moodle](https://wizao.cl/servicios/e-learning-moodle)
+- [ERP para OTEC y gestión de capacitación (TMS)](https://wizao.cl/servicios/erp-capacitacion-tms)
+- [Infraestructura tecnológica y conectividad](https://wizao.cl/servicios/infraestructura-tecnologica)

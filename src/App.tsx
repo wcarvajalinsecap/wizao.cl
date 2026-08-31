@@ -30,6 +30,7 @@ import {
 
 import WaveDivider from "./components/WaveDivider";
 import { NumberTicker } from "./components/NumberTicker";
+import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
 
 function SpotifyIcon({ className }: { className?: string }) {
   return (
@@ -387,6 +388,8 @@ export default function App() {
           </p>
         </div>
       </footer>
+      {/* CTA fijo móvil (#21) — WhatsApp siempre visible */}
+      <FloatingWhatsApp />
     </div>
   );
 }
