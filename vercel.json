@@ -1,3 +1,7 @@
 {
+  "redirects": [
+    { "source": "/servicios/:slug*", "destination": "/", "permanent": true },
+    { "source": "/linkbio", "destination": "/links", "permanent": true }
+  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
