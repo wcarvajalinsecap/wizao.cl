@@ -40,11 +40,29 @@
   .btn-ghost {
     @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-border px-7 py-3 font-semibold transition hover:border-foreground;
   }
+  /* Acción de DBO Infinity: naranjo "gi" del juego, texto en "night" (regla de contraste de su DESIGN.md) */
+  .btn-dbo {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-dbo-gi px-7 py-3 font-bold text-dbo-night shadow-[0_8px_30px_-6px_oklch(0.72_0.19_50/0.6)] transition hover:scale-[1.03] hover:brightness-110 active:scale-[.97] motion-reduce:hover:scale-100;
+  }
   .btn-link {
     @apply flex w-full items-center gap-3 rounded-2xl border border-border px-4 transition;
   }
   a:focus-visible {
     @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
+
+@layer utilities {
+  .hero-grid {
+    background-image:
+      linear-gradient(to right, hsl(var(--foreground) / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--foreground) / 0.04) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black, transparent);
+  }
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 2px hsl(var(--foreground));
   }
 }
 

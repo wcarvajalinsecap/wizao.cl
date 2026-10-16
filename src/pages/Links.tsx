@@ -30,14 +30,14 @@ export default function Links() {
 
         <ul className="mt-8 flex w-full flex-col gap-3">
           <motion.li {...item(1)}>
-            <a href={DBO_DOWNLOAD} target="_blank" rel="noopener noreferrer" className="btn-link min-h-16 py-3 border-transparent bg-primary text-primary-foreground hover:bg-primary-hover">
+            <a href={DBO_DOWNLOAD} target="_blank" rel="noopener noreferrer" className="btn-link min-h-16 py-3 border-transparent bg-dbo-gi text-dbo-night shadow-[0_8px_30px_-6px_oklch(0.72_0.19_50/0.6)] hover:brightness-110">
               <Download className="h-5 w-5 shrink-0" />
               <span className="flex flex-1 flex-col text-left leading-tight">
                 <span className="font-bold">Descargar DBO Infinity</span>
                 <span className="text-xs font-medium opacity-85">Dragon Ball Online · PC · gratis</span>
               </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-black/25 px-2.5 py-1 text-xs font-semibold">
-                <span className="h-2 w-2 animate-pulse rounded-full bg-green-400" /> Online
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-dbo-night/15 px-2.5 py-1 text-xs font-semibold">
+                <span className="h-2 w-2 animate-pulse rounded-full bg-green-600" /> Online
               </span>
             </a>
           </motion.li>

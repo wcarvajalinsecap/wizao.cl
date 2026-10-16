@@ -6,6 +6,10 @@
 
 Wilson Carvajal (alias Wizao) es un ingeniero chileno que se define como sistematizador: convierte problemas operativos recurrentes en sistemas estructurados. Lidera el área TICA de INSECAP, una OTEC chilena, donde trabaja en sistemas internos, integraciones, e-learning (Moodle) y calidad (ISO 9001 / NCh2728). Fue jurado de HackaDISC 2026 junto a la UCN. Publica videos en YouTube desde 2012 y música en Spotify y SoundCloud.
 
+## Ecosistema que construye e integra
+
+ERP de capacitación (TMS) como núcleo, conectado con Moodle 5.1, Azure, SAP, facturación electrónica (Masterbase / SII), cobranza, Talana (RRHH y remuneraciones), SENCE, QA con CI/CD y automatización con n8n y Google Workspace.
+
 ## Proyectos propios
 
 - [DBO Infinity](https://dboinfinity.com): servidor privado de Dragon Ball Online — servidor de juego, launcher, web y despliegue. [Descarga](https://dboinfinity.com/es/descargar).
