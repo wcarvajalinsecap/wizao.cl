@@ -1,4 +1,4 @@
-import { Youtube, Instagram, Twitter, Music2, Mic, Globe, Mail, type LucideIcon } from "lucide-react";
+import { Youtube, Instagram, Twitter, Music2, Mic, Globe, Mail, Coffee, type LucideIcon } from "lucide-react";
 
 type IconComp = LucideIcon | ((p: { className?: string }) => JSX.Element);
 
@@ -22,6 +22,7 @@ export const EMAIL = "hola@wizao.cl";
 export const DBO_DOWNLOAD = "https://dboinfinity.com/es/descargar";
 export const DBO_SITE = "https://dboinfinity.com";
 export const PODCAST = "https://www.youtube.com/playlist?list=PLEFHa-sTHvG2aDlqufBAD1mWdSTZdvxom";
+export const KOFI = "https://ko-fi.com/wizao";
 
 // Orden decidido por el comité: el linkBio y el footer usan esta misma lista.
 // ponytail: LinkedIn fuera hasta tener la URL real del perfil.
@@ -32,6 +33,7 @@ export const links: { label: string; href: string; icon: IconComp; social?: bool
   { label: "Spotify", href: "https://open.spotify.com/artist/0InHZv430Rp7Y2AM42lGA0", icon: SpotifyIcon, social: true },
   { label: "SoundCloud", href: "https://soundcloud.com/wizao", icon: Music2, social: true },
   { label: "X", href: "https://x.com/Owizao", icon: Twitter, social: true },
+  { label: "Apóyame en Ko-fi", href: KOFI, icon: Coffee },
   { label: "Podcast", href: PODCAST, icon: Mic },
   { label: "Web wizao.cl", href: "/", icon: Globe },
   { label: EMAIL, href: `mailto:${EMAIL}`, icon: Mail },

@@ -23,8 +23,9 @@ import {
   BadgeCheck,
   ShieldCheck,
   Workflow,
+  Coffee,
 } from "lucide-react";
-import { links, EMAIL, DBO_DOWNLOAD, DBO_SITE, PODCAST } from "./lib/site";
+import { links, EMAIL, DBO_DOWNLOAD, DBO_SITE, PODCAST, KOFI } from "./lib/site";
 import { NumberTicker } from "./components/NumberTicker";
 
 const YOUTUBE_SINCE = 2012;
@@ -449,6 +450,9 @@ export default function App() {
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a href="https://www.youtube.com/c/OWizao" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 <Youtube className="h-5 w-5" /> Ver canal
+              </a>
+              <a href={KOFI} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+                <Coffee className="h-5 w-5" /> Apóyame
               </a>
               {links.filter((l) => l.social && l.label !== "YouTube").map((l) => (
                 <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" aria-label={l.label} className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition hover:-translate-y-0.5 hover:border-accent hover:text-foreground">
