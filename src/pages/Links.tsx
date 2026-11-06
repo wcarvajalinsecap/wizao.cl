@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { Download, ChevronRight } from "lucide-react";
-import { links, DBO_DOWNLOAD } from "../lib/site";
+import { Download, ChevronRight, Coffee } from "lucide-react";
+import { links, DBO_DOWNLOAD, KOFI, DISCORD, DiscordIcon } from "../lib/site";
 import { usePageMeta } from "../lib/usePageMeta";
 
 export default function Links() {
@@ -41,8 +41,31 @@ export default function Links() {
               </span>
             </a>
           </motion.li>
+
+          <motion.li {...item(2)}>
+            <a href={KOFI} target="_blank" rel="noopener noreferrer" className="btn-link min-h-16 py-3 border-transparent bg-[#13c3ff] text-white shadow-[0_8px_30px_-6px_rgba(19,195,255,0.6)] hover:brightness-110">
+              <Coffee className="h-5 w-5 shrink-0" />
+              <span className="flex flex-1 flex-col text-left leading-tight">
+                <span className="font-bold">Apóyame en Ko-fi</span>
+                <span className="text-xs font-medium opacity-90">Invítame un café · apoyo mensual</span>
+              </span>
+              <ChevronRight className="h-4 w-4 shrink-0 opacity-90" />
+            </a>
+          </motion.li>
+
+          <motion.li {...item(3)}>
+            <a href={DISCORD} target="_blank" rel="noopener noreferrer" className="btn-link min-h-16 py-3 border-transparent bg-[#5865f2] text-white shadow-[0_8px_30px_-6px_rgba(88,101,242,0.6)] hover:brightness-110">
+              <DiscordIcon className="h-5 w-5 shrink-0" />
+              <span className="flex flex-1 flex-col text-left leading-tight">
+                <span className="font-bold">Comunidad en Discord</span>
+                <span className="text-xs font-medium opacity-90">DBO Infinity · únete al servidor</span>
+              </span>
+              <ChevronRight className="h-4 w-4 shrink-0 opacity-90" />
+            </a>
+          </motion.li>
+
           {links.map((l, i) => (
-            <motion.li key={l.href} {...item(i + 2)}>
+            <motion.li key={l.href} {...item(i + 4)}>
               <a
                 href={l.href}
                 {...(l.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
